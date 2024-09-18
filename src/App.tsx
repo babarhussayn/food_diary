@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import '../src/styles/style.scss';
 import MainWrape from './wrappers/Main-wrape';
 

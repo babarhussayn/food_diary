@@ -19,6 +19,7 @@ const Search: FC = () => {
         <div className="search-main">
             <form onSubmit={submit}>
                 <input 
+                className='search-main-input'
                     type="text" 
                     placeholder="Search" 
                     value={keyword} 

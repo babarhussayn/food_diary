@@ -3,9 +3,12 @@
     animation: SHOW-BOX 2s ease-out;
     z-index: 2;
 
-    & .search-main input{
-        width: 50%;
+    & .search-main-input input{
+        width: 100%;
         border-radius: 10%;
-        
+
+    }
+    & .search-main-button{
+        background-color: green;
     }
 }
