@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/base/navbae.scss'
+
 
 interface navbar{
     name:string,

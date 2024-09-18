@@ -26,7 +26,8 @@ interface Recipe {
   
   const product: React.FC = () => {
     return (
-      <div>
+      <>
+      <div >
         <h1>Recipe List</h1>
         {foodData.recipes.map((recipe: Recipe, index: number) => (
           <div key={recipe.id}>
@@ -53,7 +54,7 @@ interface Recipe {
           </div>
         ))}
       </div>
-    );
+      </>);
   };
 
 export default product
