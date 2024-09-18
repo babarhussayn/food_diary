@@ -1,3 +1,4 @@
+import Search from "./Search_bar"
 
 
 const Header = () => {
@@ -8,7 +9,8 @@ const Header = () => {
         logo
         </div>
       <div className="header-search">
-        Search
+      
+        <Search/>
       </div>
     
       {/* <div>
