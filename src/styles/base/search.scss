@@ -2,4 +2,10 @@
     position: absolute;
     animation: SHOW-BOX 2s ease-out;
     z-index: 2;
+
+    & .search-main input{
+        width: 50%;
+        border-radius: 10%;
+        
+    }
 }
