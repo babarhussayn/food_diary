@@ -17,7 +17,7 @@ const Search: FC = () => {
 
     return (
         <div className="search-main">
-            <form onSubmit={submit}>
+            <form onSubmit={submit} className='search-anim'>
                 <input 
                 className='search-main-input'
                     type="text" 
