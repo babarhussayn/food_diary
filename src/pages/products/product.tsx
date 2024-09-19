@@ -1,6 +1,6 @@
 import React from 'react'
 import foodData from '../../dataApi.json'
-
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -24,7 +24,13 @@ interface Recipe {
     mealType: string[];
   }
   
-  const product: React.FC = () => {
+  const Product: React.FC = () => {
+    const navigate = useNavigate()
+
+    const handleCardClick = (id:number) => {
+      navigate(`/product/${id}`); 
+    };
+
     return (
       <>
       <div className='product-container'>
@@ -32,7 +38,7 @@ interface Recipe {
         <h1>Recipe List</h1>
         <div className='product-grid'>
         {foodData.recipes.map((recipe: Recipe, index: number) => (
-          <div key={recipe.id} className='product-card'>
+          <div key={recipe.id} className='product-card' onClick={() => handleCardClick(recipe.id)}>
             <h2>{recipe.name}</h2>
             <img src={recipe.image} alt={recipe.name} />
             <p><strong>Cuisine:</strong> {recipe.cuisine}</p>
@@ -62,4 +68,4 @@ interface Recipe {
       </>);
   };
 
-export default product
+export default Product
