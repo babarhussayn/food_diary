@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-// Define types for Recipe and Props
+
 interface Recipe {
   id: number;
   name: string;
@@ -28,9 +28,9 @@ interface ProductDetailProps {
 }
 
 const ProductDetail: React.FC<ProductDetailProps> = ({ foodData }) => {
-  const { id } = useParams<{ id: string }>(); // Get the product ID from the URL
+  const { id } = useParams<{ id: string }>(); 
 
-  // Ensure id is a number
+
   const productId = id ? parseInt(id, 10) : -1;
   
   const product = foodData.recipes.find((recipe) => recipe.id === productId);
