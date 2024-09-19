@@ -12,12 +12,13 @@ interface MainWrapeProps{
 
 const MainWrape: React.FC<MainWrapeProps> = ({ children }) => {
   return (
-    <div>
+    <>
       <Navbar/>
+      
       <Header/>
       {children}
       <Footer/>
-    </div>
+    </>
   )
 }
 

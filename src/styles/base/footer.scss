@@ -1,9 +1,14 @@
 .footer-main {
     width: 100%;
     position: relative; 
+    bottom: 0px;
+    
+    
+    
 
- & .footer-img {
+ & .footer-img img{
         width: 100%;
+        bottom: 0%;
     }
 
     & .footer-logo {
