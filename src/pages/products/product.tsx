@@ -2,7 +2,7 @@ import React from 'react'
 import foodData from '../../dataApi.json'
 import { useNavigate } from 'react-router-dom';
 
-
+import { WiTime9 } from "react-icons/wi";
 
 
 interface Recipe {
@@ -39,26 +39,31 @@ interface Recipe {
         <div className='product-grid'>
         {foodData.recipes.map((recipe: Recipe, index: number) => (
           <div key={recipe.id} className='product-card' onClick={() => handleCardClick(recipe.id)}>
-            <h2>{recipe.name}</h2>
+            <div className='product-card-relate'>
             <img src={recipe.image} alt={recipe.name} />
-            <p><strong>Cuisine:</strong> {recipe.cuisine}</p>
-            <p><strong>Difficulty:</strong> {recipe.difficulty}</p>
-            <p><strong>Prep Time:</strong> {recipe.prepTimeMinutes} minutes</p>
-            <p><strong>Cook Time:</strong> {recipe.cookTimeMinutes} minutes</p>
-            <p><strong>Servings:</strong> {recipe.servings}</p>
-            <p><strong>Rating:</strong> {recipe.rating} ({recipe.reviewCount} reviews)</p>
-            <h3>Ingredients</h3>
-            <ul>
-              {recipe.ingredients.map((ingredient, i: number) => (
-                <li key={i}>{ingredient}</li>
-              ))}
-            </ul>
-            <h3>Instructions</h3>
-            <ol>
-              {recipe.instructions.map((instruction, i: number) => (
-                <li key={i}>{instruction}</li>
-              ))}
-            </ol>
+            
+            <div className='product-card-absol'>
+              <h3>
+              {recipe.cuisine}
+              </h3>
+              
+            </div>
+            </div>
+            <div className='product-card-sec'> 
+              <div className='product-card-rm'>
+            <h4>{recipe.name}</h4></div>
+              <div className='product-card-rate'>
+            <span> Reviews: {recipe.reviewCount} </span>
+           </div>
+            </div>
+           
+           
+            
+            
+            <div className='product-card-tim'><strong><WiTime9 /></strong> {recipe.cookTimeMinutes} minutes</div>
+           
+            
+           
           </div>
           
         ))}

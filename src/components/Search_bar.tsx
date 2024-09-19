@@ -18,6 +18,7 @@ const Search: FC = () => {
     return (
         <div className="search-main">
             <form onSubmit={submit} className='search-anim'>
+               
                 <input 
                 className='search-main-input'
                     type="text" 
@@ -28,6 +29,9 @@ const Search: FC = () => {
                 <button type="submit" className='search-main-button'>
                     Search
                 </button>
+ <div className='search-all'>
+                    <h6>All category</h6>
+                </div>
             </form>
         </div>
     );

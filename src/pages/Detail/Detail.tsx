@@ -50,21 +50,22 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ foodData }) => {
       <p><strong>Prep Time:</strong> {product.prepTimeMinutes} minutes</p>
       <p><strong>Cook Time:</strong> {product.cookTimeMinutes} minutes</p>
       <p><strong>Servings:</strong> {product.servings}</p>
-      <p><strong>Rating:</strong> {product.rating} ({product.reviewCount} reviews)</p>
+      <p><strong>Rating:</strong> {product.rating} </p>
       
       <h3>Ingredients</h3>
       <ul>
         {product.ingredients.map((ingredient, i) => (
-          <li key={i}>{ingredient}</li>
+          
+          <li key={i}><img src='/icons/Group-6.png' alt="icon-green "/>{ingredient}</li>
         ))}
       </ul>
 
       <h3>Instructions</h3>
-      <ol>
+      <ul>
         {product.instructions.map((instruction, i) => (
-          <li key={i}>{instruction}</li>
+          <li key={i}><img src='/icons/Group-6.png' alt="icon-green "/>{instruction}</li>
         ))}
-      </ol>
+      </ul>
       </div>
       </div>
       <div className='detail-img'>
