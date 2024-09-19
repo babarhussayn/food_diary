@@ -1,0 +1,18 @@
+.detail-main{
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    gap: 24px;
+
+    & .detail-content{
+        background-color: grey;
+        width: 325px;
+        height: 425px;
+        overflow: hidden;
+    }
+    & .detail-img img{
+        
+        width: 550px;
+    }
+}

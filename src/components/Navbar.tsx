@@ -39,11 +39,11 @@ const Navbar = () => {
 </div>
 <div className='main-sec'>
     <div className='main-register'>
-        <img src="icons/icon-2.png" alt="arro" />
+        <img src="icons/icons-2.png" alt="arro" />
         <h4 className='main-font-1'>Register</h4>
          </div>
     <div className='main-register'>
-        <img src='icons/icon-1.png' alt='person'/>
+        <img src='icons/icons-1.png' alt='person'/>
         <h4 className='main-font-1'>Login</h4></div>
     </div>
 

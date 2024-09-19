@@ -40,9 +40,11 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ foodData }) => {
   }
 
   return (
-    <div>
+    <div className='detail-main'>
+        <div className='detail-content'>
+            <div className='detail-cont-1'>
       <h1>{product.name}</h1>
-      <img src={product.image} alt={product.name} />
+     
       <p><strong>Cuisine:</strong> {product.cuisine}</p>
       <p><strong>Difficulty:</strong> {product.difficulty}</p>
       <p><strong>Prep Time:</strong> {product.prepTimeMinutes} minutes</p>
@@ -63,6 +65,11 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ foodData }) => {
           <li key={i}>{instruction}</li>
         ))}
       </ol>
+      </div>
+      </div>
+      <div className='detail-img'>
+      <img src={product.image} alt={product.name} />
+      </div>
     </div>
   );
 };

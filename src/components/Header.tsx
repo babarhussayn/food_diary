@@ -6,7 +6,7 @@ const Header = () => {
     <div className='header '>
       <div className="header-sec">
       
-        logo
+        <img src="images/CP-Logo 1.png" alt="logo" />
         </div>
       <div className="header-search">
       
