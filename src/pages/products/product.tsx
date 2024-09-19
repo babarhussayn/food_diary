@@ -27,10 +27,12 @@ interface Recipe {
   const product: React.FC = () => {
     return (
       <>
-      <div >
+      <div className='product-container'>
+      <div className='product-main' >
         <h1>Recipe List</h1>
+        <div className='product-grid'>
         {foodData.recipes.map((recipe: Recipe, index: number) => (
-          <div key={recipe.id}>
+          <div key={recipe.id} className='product-card'>
             <h2>{recipe.name}</h2>
             <img src={recipe.image} alt={recipe.name} />
             <p><strong>Cuisine:</strong> {recipe.cuisine}</p>
@@ -52,7 +54,10 @@ interface Recipe {
               ))}
             </ol>
           </div>
+          
         ))}
+        </div>
+      </div>
       </div>
       </>);
   };

@@ -1,0 +1,29 @@
+.footer-main {
+    width: 100%;
+    position: relative; // Ensure relative positioning of the container
+
+ & .footer-img {
+        width: 100%;
+    }
+
+    & .footer-logo {
+        position: absolute;
+        top: 60%; 
+        left: 10%; 
+        transform: translate(-50%, -50%); 
+    
+    }
+     & .footer-sp{
+        position: absolute;
+        top: 80%; 
+        left: 9%; 
+        transform: translate(-50%, -50%); 
+     }
+
+    & .footer-span{
+        color:#fefefe !important;
+        top: 40%; 
+        left: 10%;
+
+    }
+}
