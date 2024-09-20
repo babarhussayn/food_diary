@@ -1,6 +1,6 @@
 import React, { FC, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { IoSearchCircleSharp } from "react-icons/io5";
+
 import { IoSearchOutline } from "react-icons/io5";
 const Search: FC = () => {
   const [keyword, setKeyword] = useState("");
@@ -10,7 +10,7 @@ const Search: FC = () => {
     e.preventDefault();
 
     navigate({
-      pathname: "/products",
+      pathname: "/product",
       search: `?search=${keyword}`,
     });
   };
