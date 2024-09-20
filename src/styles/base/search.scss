@@ -5,27 +5,41 @@
 
   & .search-main-input {
     position: relative;
-    width: 50%;
+    width: 30%;
     border-radius: 25px;
+    border: 1px solid #D9D9D9;
     padding: 15px;
+    padding-left: 15%;
+  }
+  & .search-main input{
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    text-align: center; 
+    height: 100%; 
+    width: 100%; 
+    box-sizing: border-box
+
   }
   & .search-main-button {
     position: absolute;
-    background-color: green;
+    
     top: 50%;
-    left: 49%;
+    right: 50%;
     transform: translate(-50%, -50%);
-    padding: 15px;
-    border-radius: 30px;
+    
+    border-radius: 20px;
+    border: none;
   }
   & .search-all h6 {
     position: absolute;
     background-color: #d0c5c5;
     top: 0%;
-    left: 6.8%;
+    left: 5.5%;
     transform: translate(-50%, -50%);
     padding: 18px;
     border-radius: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
