@@ -35,7 +35,10 @@ const Product: React.FC = () => {
     (recipe: Recipe) =>
       recipe.name.toLowerCase().includes(searchKeyword.toLowerCase()) ||
       recipe.cuisine.toLowerCase().includes(searchKeyword.toLowerCase())
+      
   );
+  console.log("Search Keyword:", searchKeyword);
+console.log("Filtered Recipes:", filteredRecipes);
 
 
   const handleCardClick = (id: number) => {
@@ -48,36 +51,40 @@ const Product: React.FC = () => {
         <div className="product-main">
           <h1>Recipe List</h1>
           <div className="product-grid">
-            {filteredRecipes.map((recipe: Recipe, index: number) => (
-              <div
-                key={recipe.id}
-                className="product-card"
-                onClick={() => handleCardClick(recipe.id)}
-              >
-                <div className="product-card-relate">
-                  <img src={recipe.image} alt={recipe.name} />
+          {filteredRecipes.length > 0 ? (
+              filteredRecipes.map((recipe: Recipe, index: number) => (
+                <div
+                  key={recipe.id}
+                  className="product-card"
+                  onClick={() => handleCardClick(recipe.id)}
+                >
+                  <div className="product-card-relate">
+                    <img src={recipe.image} alt={recipe.name} />
 
-                  <div className="product-card-absol">
-                    <h3>{recipe.cuisine}</h3>
+                    <div className="product-card-absol">
+                      <h3>{recipe.cuisine}</h3>
+                    </div>
                   </div>
-                </div>
-                <div className="product-card-sec">
-                  <div className="product-card-rm">
-                    <h4>{recipe.name}</h4>
+                  <div className="product-card-sec">
+                    <div className="product-card-rm">
+                      <h4>{recipe.name}</h4>
+                    </div>
+                    <div className="product-card-rate">
+                      <span> Reviews: {recipe.reviewCount} </span>
+                    </div>
                   </div>
-                  <div className="product-card-rate">
-                    <span> Reviews: {recipe.reviewCount} </span>
-                  </div>
-                </div>
 
-                <div className="product-card-tim">
-                  <strong>
-                    <WiTime9 />
-                  </strong>{" "}
-                  {recipe.cookTimeMinutes} minutes
+                  <div className="product-card-tim">
+                    <strong>
+                      <WiTime9 />
+                    </strong>{" "}
+                    {recipe.cookTimeMinutes} minutes
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))
+            ) : (
+              <p>No recipes found for "{searchKeyword}".</p>
+            )}
           </div>
         </div>
       </div>
