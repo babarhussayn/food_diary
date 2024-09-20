@@ -9,8 +9,8 @@ function App() {
   return (
     <MainWrape>
       <Routes>
-        <Route path="/" element={<Product />} />
-        <Route path="/product/:id" element={<Detail foodData={foodData}/>} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/products/product/:id" element={<Detail foodData={foodData}/>} />
       </Routes>
     </MainWrape>
   );
