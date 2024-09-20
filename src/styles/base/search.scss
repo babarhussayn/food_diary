@@ -20,6 +20,14 @@
     box-sizing: border-box
 
   }
+  .search-main-input::placeholder {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.38px;
+    text-align: center;
+  }
+  
   & .search-main-button {
     position: absolute;
     
