@@ -14,6 +14,9 @@ const Search: FC = () => {
       search: `?search=${keyword}`,
     });
   };
+  const handleAllCate=()=>{
+    navigate('/')
+  }
 
   return (
     <div className="search-main">
@@ -29,8 +32,8 @@ const Search: FC = () => {
         
         <IoSearchOutline size={41} color="black" />
         </button>
-        <div className="search-all">
-          <h6>All category</h6>
+        <div className="search-all" >
+        <button type="button" onClick={handleAllCate} className="search-all-buton">All Category</button>
         </div>
       </form>
     </div>
