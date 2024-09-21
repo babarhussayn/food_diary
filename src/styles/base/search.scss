@@ -2,7 +2,6 @@
   position: relative;
   animation: SHOW-BOX 2s ease-out;
   z-index: 2;
-  overflow-y: hidden;
 
   & .search-main-input {
     position: relative;
@@ -36,7 +35,7 @@
     position: absolute;
 
     top: 50%;
-    right: 55px;
+    right: 31px;
     transform: translate(-50%, -50%);
 
     border-radius: 20px;
