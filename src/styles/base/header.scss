@@ -4,13 +4,14 @@
   align-items: center;
   justify-items: center;
   gap: 4px;
-  width: 100%;
+
   position: sticky;
   top: 0;
   z-index: 1000;
   background-color: white;
   padding: 10px 20px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-y: hidden;
 }
 
 .header-sec {
